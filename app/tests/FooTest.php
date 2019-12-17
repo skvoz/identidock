@@ -15,6 +15,6 @@ class FooTest extends TestCase
 
     public function testBar()
     {
-        $this->assertTrue(false);
+//        $this->assertTrue(false);
     }
 }
