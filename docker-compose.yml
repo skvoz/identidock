@@ -5,7 +5,7 @@ identidock:
   environment:
     ENV: DEV
   volumes:
-  - $(pwd)/app:/app
+  - $PWD/app:/app
   links:
   - dnmonster
   - redis
