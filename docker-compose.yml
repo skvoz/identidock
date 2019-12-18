@@ -3,15 +3,21 @@ identidock:
   ports:
   - "5000:5000"
   environment:
-    ENV: DEV
+    ENV: PROD
   volumes:
   - $PWD/app:/app
   links:
   - dnmonster
   - redis
-
+  
 dnmonster:
   image: amouat/dnmonster:1.0
 
 redis:
   image: redis:3.0
+
+composer:
+  image: composer:latest
+  volumes:
+  - $PWD/app:/app
+  command: 'true'
