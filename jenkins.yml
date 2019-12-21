@@ -13,3 +13,9 @@ dnmonster:
 
 redis:
   image: redis:3.0
+
+composer:
+  image: composer:latest
+  volumes:
+  - $PWD/app:/app
+  command: 'true'
