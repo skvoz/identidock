@@ -1,6 +1,10 @@
 {
   "require": {
-    "php": ">=7.3"
+    "php": ">=7.3",
+    "yzalis/identicon": "*",
+    "silex/silex": "^2.0",
+    "guzzlehttp/guzzle": "*",
+    "predis/predis": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.0"

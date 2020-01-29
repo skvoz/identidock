@@ -1,17 +1,20 @@
 identidock:
   build: .
   ports:
-  - "5000:5000"
+    - "5000:5000"
+    - "44380:443"
   environment:
     ENV: PROD
   volumes:
-  - $PWD/app:/app
+    - $PWD/app:/app
   links:
-  - dnmonster
-  - redis
+    - dnmonster
+    - redis
   
 dnmonster:
   image: amouat/dnmonster:1.0
+  ports:
+    - "9991:8080"
 
 redis:
   image: redis:3.0
@@ -19,5 +22,5 @@ redis:
 composer:
   image: composer:latest
   volumes:
-  - $PWD/app:/app
+    - $PWD/app:/app
   command: 'true'
