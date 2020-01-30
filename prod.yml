@@ -1,10 +1,12 @@
 proxy:
-  image: identiproxy:0.1
+  image: proxy:1.0
   links:
     - identidock
   ports:
     - "81:81"
-
+  environment:
+    - NGINX_HOST=localhost
+    - NGINX_PROXY=http://identidock:5000
 identidock:
   build: .
   ports:
